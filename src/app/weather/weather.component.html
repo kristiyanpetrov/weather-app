@@ -1,0 +1,11 @@
+<input type="text" (keyup)="getCityData()" [(ngModel)]="cityName">
+<div *ngIf="!error">
+  <p>City: {{cityName}}</p>
+  <p>Temp: {{temp}}</p>
+  <p>Descr: {{description}}</p>
+  <img [src]="icon" height="70px" alt="no image">
+<!--  <p>{{ description }} {{temp}}</p>-->
+</div>
+<div *ngIf="error">
+  <p>{{error.message}}</p>
+</div>
